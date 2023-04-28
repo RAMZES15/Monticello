@@ -1,0 +1,34 @@
+// $breakpointsValue:
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1170px;
+$breakpoint-2xl: 100%;
+
+// $containeryTriggerValue:
+$containeryTrigger-xs: calc(#{$breakpoint-xs} - 1px);
+$containeryTrigger-sm: calc(#{$breakpoint-sm} - 1px);
+$containeryTrigger-md: calc(#{$breakpoint-md} - 1px);
+$containeryTrigger-lg: calc(#{$breakpoint-lg} - 1px);
+$containeryTrigger-xl: calc(#{$breakpoint-xl} - 1px);
+$containeryTrigger-2xl: calc(#{$breakpoint-2xl} - 1px);
+
+$breakpoints: (
+    'xs': $containeryTrigger-xs,
+    'sm': $containeryTrigger-sm,
+    'md': $containeryTrigger-md,
+    'lg': $containeryTrigger-lg,
+    'xl': $containeryTrigger-xl,
+    '2xl': $containeryTrigger-2xl
+);
+
+@mixin breakpoint($br: '2xl') {
+    @media screen and (max-width: map-get($breakpoints, $br)) {
+        @content;
+    }
+}
+
+// @include breakpoint() {
+// 	css code
+// }

@@ -1,0 +1,41 @@
+.intro-btn{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 10;
+    left: calc((100% - 40px)/2);
+    bottom: 50px;
+    transition: all 0.3s;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    &::after{
+        content: '';
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: calc((40px - 15px)/2);
+        left: 14px;
+        transform: rotateZ(-45deg);
+    }
+}
+
+.--btn{
+    border: 1px solid #2C4058;
+    background-color: white;
+    padding: 15px 40px;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s;
+    &:hover{
+        background-color: lightgray;
+    }
+    &:active{
+        background-color: rgb(182, 182, 182);
+    }
+}

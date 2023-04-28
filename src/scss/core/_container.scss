@@ -1,0 +1,36 @@
+.container {
+    max-width: $breakpoint-2xl;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 calc((#{$breakpoint-2xl} - #{$breakpoint-xl}) / 2 );
+
+    @include breakpoint('2xl') {
+        max-width: $breakpoint-xl;
+        padding: 0 calc((#{$breakpoint-xl} - #{$breakpoint-lg}) / 2 );
+    }
+
+    @include breakpoint('xl') {
+        max-width: $breakpoint-lg;
+        padding: 0 calc((#{$breakpoint-lg} - #{$breakpoint-md}) / 2 );
+    }   
+
+    @include breakpoint('lg') {
+        max-width: $breakpoint-md;
+        padding: 0 calc((#{$breakpoint-md} - #{$breakpoint-sm}) / 2 );
+    }
+
+    @include breakpoint('md') {
+        max-width: $breakpoint-sm;
+        padding: 0 calc((#{$breakpoint-sm} - #{$breakpoint-xs}) / 2 );
+    }
+
+    @include breakpoint('sm') {
+        max-width: $breakpoint-xs;
+        padding: 0 20px;
+    }
+
+    @include breakpoint('xs') {
+        max-width: 100%;
+    }
+
+}
