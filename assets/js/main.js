@@ -71,6 +71,9 @@ function scrol(section){
 document.getElementById('scrol1').addEventListener('click', function() {
   scrol(about);
 });
+document.getElementById('scrol0').addEventListener('click', function() {
+  scrol(about);
+});
 document.getElementById('scrol2').addEventListener('click', function() {
   scrol(prj);
 });
